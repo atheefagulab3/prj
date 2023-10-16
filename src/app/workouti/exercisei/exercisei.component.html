@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body routerLinkActive="/home">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand"  routerLink="/home">FitBoz</a>
+
+		<div class="collapse navbar-collapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" routerLink="/work" > Workouts </a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link"  routerLink="/exe" >Exercise</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link"></a>
+				</li>
+        <div class="dropdown me-auto">
+          <button class="btn btn-dark text-white dropdown-toggle" type="button" data-bs-toggle="dropdown" >
+           Filter
+          </button>
+          <ul class="dropdown-menu ">
+            <li><a class="dropdown-item " routerLink="/triple">Multiple filter</a></li>
+            <li><a class="dropdown-item" routerLink="/wid/:eid">Workout</a></li>
+            <li><a class="dropdown-item" routerLink="/ecount">count</a></li>
+            <li><a class="dropdown-item" routerLink="/inten">intensity</a></li>
+            <li><a class="dropdown-item " href="/home">none</a></li>
+          </ul>
+        </div> 
+
+			</ul>
+      
+		</div>
+	</nav>
+
+
+
+<div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+  
+          <div class="card-body p-5 text-center">
+    
+            <div class="mb-md-5 mt-md-4 pb-5">
+  
+              <h2 class="fw-bold mb-2 text-uppercase">Our Amazing!!!!!</h2>
+  
+      
+      <form >
+          <div class="form-outline form-white mb-4">
+            <label for="wid">workot Id: </label>
+<input type="text" name="wid" [(ngModel)]="exe.wid">
+          </div>
+        <div class="form-outline form-white mb-4">
+            <label for="supplement">Supplement :</label>
+            <input type="text" name="supplement" [(ngModel)]="exe.supplement">
+        </div>
+        <div class="form-outline form-white mb-4">
+            <label for="timeFrame">TimeFrame :</label>
+            <input type="text" name="timeFrame" [(ngModel)]="exe.timeFrame">
+      </div>
+      <div class="form-outline form-white mb-4">
+        <label for="wkSet">Set :</label>
+        <input type="text" name="wkSet" [(ngModel)]="exe.wkSet"> 
+      </div>
+      <div class="form-outline form-white mb-4">
+        <label for="wkRep">Rep :</label>
+        <input type="text" name="wkRep" [(ngModel)]="exe.wkRep">  
+      </div>
+      <div class="form-outline form-white mb-4">
+        <label for="equipmentRequired">Equipment :</label>
+        <input type="text" name="equipmentRequired" [(ngModel)]="exe.equipmentRequired">   
+      </div>
+      <div class="form-outline form-white mb-4">
+        <label for="diet">Diet :</label>
+<input type="text" name="diet" [(ngModel)]="exe.diet">   
+      </div>
+      <button  class="btn btn-outline-light btn-lg px-5" (click)="poste()" >Insert</button>
+    </form>
+      
+    </div> 
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </body>
+    </html>
+    
+   
+    
+  
+       

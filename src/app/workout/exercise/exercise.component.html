@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body routerLinkActive="/home">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand"  routerLink="/home">FitBoz</a>
+
+		<div class="collapse navbar-collapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" routerLink="/work" > Workouts </a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link"  routerLink="/exe" (click)="Checking()" >Exercise</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link"></a>
+				</li>
+        <div class="dropdown me-auto">
+          <button class="btn btn-dark text-white dropdown-toggle" type="button" data-bs-toggle="dropdown" >
+           Filter
+          </button>
+          <ul class="dropdown-menu ">
+            <li><a class="dropdown-item " routerLink="/triple">Multiple filter</a></li>
+            <li><a class="dropdown-item" routerLink="/wid/:eid">Workout</a></li>
+            <li><a class="dropdown-item" routerLink="/ecount">count</a></li>
+            <li><a class="dropdown-item" routerLink="/inten">intensity</a></li>
+            <li><a class="dropdown-item " href="/home">none</a></li>
+          </ul>
+        </div> 
+
+			</ul>
+      
+		</div>
+	</nav>
+<div class="container">
+  <!-- <button (click)="Fetche()">GetAlla</button> -->
+  <div class="row">
+    <div class="col-md-12">
+      <h4> Discover Our Amazing Workout plans</h4>
+    </div>
+    <br><br>
+    <div  class="col-md-4" *ngFor="let e of exe" >
+      <div class="card animate-on-scroll">
+        <div class="card-body text-white bg-dark">
+          <p>id:{{e.eid}}</p>
+  <h4>wid:{{e.wid}}</h4>
+  <p>supplement:{{e.supplement}}</p>
+    <p>time:{{e.timeFrame}}</p>
+    <p>set:{{e.wkSet}}</p>
+     <p>rep:{{e.wkRep}}</p>
+      <p>equipments{{e.equipmentRequired}}</p>
+      <p>diet{{e.diet}}</p>
+     
+          <button class="btn btn-primary btn-custom book-now-btn animate-on-hover" style="margin-right: 10px;" (click)="put(e.eid)" >update</button>
+          <button class="btn btn-danger btn-custom book-now-btn animate-on-hover" routerLink="/exed/:eid">Delete</button>
+        </div>
+      </div>
+      <br>
+    
+    </div>
+    <div class="col-md-4" (click)="Checking()" >
+      <div class="card animate-on-scroll">
+        <div class="card-body text-white bg-dark">
+          <p>Wanna Add new Exercises </p>
+          <p>we have so much</p>
+          <button class="btn btn-outline-light btn-lg px-5" type="submit" routerLink="/exercisei">add</button> 
+        </div>
+      </div>
+    
+    </div>
+  </div>
+ 
+</div> 
+
+
+     

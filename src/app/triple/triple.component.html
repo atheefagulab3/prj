@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body routerLinkActive="/home">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand"  routerLink="/home">FitBoz</a>
+
+		<div class="collapse navbar-collapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" routerLink="/work" > Workouts </a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link"  routerLink="/exe" >Exercise</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link"></a>
+				</li>
+        <div class="dropdown me-auto">
+          <button class="btn btn-dark text-white dropdown-toggle" type="button" data-bs-toggle="dropdown" >
+           Filter
+          </button>
+          <ul class="dropdown-menu ">
+            <li><a class="dropdown-item " routerLink="/triple">Multiple filter</a></li>
+            <li><a class="dropdown-item" routerLink="/wid/:eid">Workout</a></li>
+            <li><a class="dropdown-item" routerLink="/ecount">count</a></li>
+            <li><a class="dropdown-item" routerLink="">Intensity</a></li>
+          </ul>
+        </div> 
+
+			</ul>
+      
+		</div>
+	</nav>
+<br>
+<br>
+<br>
+<div class="exercise-section" style="align-items: center;">
+ 
+
+  <div class="input-container">
+    <input [(ngModel)]="supplement" type="text" id="supplement" placeholder="Please enter your supplement">
+    <input [(ngModel)]="timeframe" type="text" id="timeframe" placeholder="Please enter your timeframe">
+    <input [(ngModel)]="wkset" type="text" id="wkset" placeholder="Please enter your wkset" required>
+  </div>
+
+  <div class="button-container">
+    <button class="btn btn-outline-light btn-lg px-5" (click)="triple()">Get</button>
+  </div>
+
+  <div *ngFor="let exe of exercise" class="exercise-item">
+    <h4>wid:{{exe.wid}}</h4>
+    <p>supplement:{{exe.supplement}}</p>
+    <p>time:{{exe.timeFrame}}</p>
+    <p>set:{{exe.wkSet}}</p>
+    <p>rep:{{exe.wkRep}}</p>
+    <p>equipments{{exe.equipmentRequired}}</p>
+    <p>diet{{exe.diet}}</p>
+  </div>
+</div>
+</body>
+</html>

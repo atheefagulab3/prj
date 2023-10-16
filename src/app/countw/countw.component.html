@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body routerLinkActive="/home">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand"  routerLink="/home">FitBoz</a>
+
+		<div class="collapse navbar-collapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" routerLink="/work" > Workouts </a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link"  routerLink="/exe"  >Exercise</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link"></a>
+				</li>
+        <div class="dropdown me-auto">
+          <button class="btn btn-dark text-white dropdown-toggle" type="button" data-bs-toggle="dropdown" >
+           Add Filter
+          </button>
+          <ul class="dropdown-menu ">
+            <li><a class="dropdown-item " href="#">Date Time</a></li>
+            <li><a class="dropdown-item " href="#">Total Count</a></li>
+            <li><a class="dropdown-item" routerLink="/work">none</a></li>
+            
+          </ul>
+        </div> 
+
+			</ul>
+      
+		</div>
+	</nav>
+	<div class="card bg-dark text-white">
+		<img class="card-img" src='assets/6.jpg' alt="Card image" style="width: 100%;height: 500px;">
+		<div class="card-img-overlay">
+		  <h1 class="card-title"><b>I HATE EVERY MINUTE OF TRAINING. BUT I SAID, DON’T QUIT. SUFFER NOW AND LIVE THE REST OF YOUR LIFE AS A CHAMPION. – MOHAMMAD ALI.</b></h1>
+		  <p class="card-text">"Exercise not only changes your body, it changes your mind, your attitude and your mood."</p>
+		  
+		</div>
+	  </div>
+	  <div class="container-fluid">
+		<div class="row">
+		  <h1 class="athee" style="color: black;text-align: center;"><span>Our Community</span></h1>
+		  <div class="col-4" routerLink="/wcount">
+			<div class="row">
+			  
+				<h3> We are a growning communitiy of {{ Workout }} </h3>
+				 
+				  
+				   <p> We are totally grateful for our community</p>
+				  
+				  </div>
+				  </div>
+	
+			 </div>
+	  </div>
+	  <br>
+	  <h1 class="athee" style="color: black;text-align: center;"><span>Why Our Gym?</span></h1>
+	  <br>
+	
+	
+	<div id="carouselExampleIndicators" class="carousel slide">
+	  <div class="carousel-inner">
+		<div class="carousel-item active">
+		  <div class="row">
+			<div class="col-md-6">
+			  <div class="card text-white bg-dark mb-12" style="max-width: 540px;margin: 0 auto;">
+				<div class="row no-gutters">
+				  <div class="col-md-12">
+					<img src="assets/3.jpeg" class="card-img" alt="...">
+				  </div>
+				  <div class="col-md-12">
+					<div class="card-body">
+					  <h5 class="card-title">How is our center different from a regular gym?</h5>
+					  <p class="card-text" style="font-size: smaller;">With our non-conventional training facility, we aim to give you a balanced mix of workouts that will enhance your health while having fun at the same time. Fit Box differentiates itself from other fitness centers by offering group workouts that focus on overall development. Fit Box has a simple philosophy - make fitness fun and easy with the help of best-in-class trainers and group workouts.</p>
+					  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-6">
+			  <div class="card text-white bg-dark mb-12" style="max-width: 540px;margin: 0 auto;">
+				<div class="row no-gutters">
+				  <div class="col-md-12">
+					<img src="assets/3.jpeg" class="card-img" alt="...">
+				  </div>
+				  <div class="col-md-12">
+					<div class="card-body">
+					  <h5 class="card-title">How is our center different from a regular gym?</h5>
+					  <p class="card-text" style="font-size: smaller;">With our non-conventional training facility, we aim to give you a balanced mix of workouts that will enhance your health while having fun at the same time. Fit Box differentiates itself from other fitness centers by offering group workouts that focus on overall development. Fit Box has a simple philosophy - make fitness fun and easy with the help of best-in-class trainers and group workouts.</p>
+					  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="carousel-item">
+		  <div class="row">
+			<div class="col-md-6">
+			  <div class="card text-white bg-dark mb-12" style="max-width: 540px;margin: 0 auto;">
+				<div class="row no-gutters">
+				  <div class="col-md-12">
+					<img src="assets/3.jpeg" class="card-img" alt="...">
+				  </div>
+				  <div class="col-md-12">
+					<div class="card-body">
+					  <h5 class="card-title">How is our center different from a regular gym?</h5>
+					  <p class="card-text" style="font-size: smaller;">With our non-conventional training facility, we aim to give you a balanced mix of workouts that will enhance your health while having fun at the same time. Fit Box differentiates itself from other fitness centers by offering group workouts that focus on overall development. Fit Box has a simple philosophy - make fitness fun and easy with the help of best-in-class trainers and group workouts.</p>
+					  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-6">
+			  <div class="card text-white bg-dark mb-12" style="max-width: 540px;margin: 0 auto;">
+				<div class="row no-gutters">
+				  <div class="col-md-12">
+					<img src="assets/3.jpeg" class="card-img" alt="...">
+				  </div>
+				  <div class="col-md-12">
+					<div class="card-body">
+					  <h5 class="card-title">How is our center different from a regular gym?</h5>
+					  <p class="card-text" style="font-size: smaller;">With our non-conventional training facility, we aim to give you a balanced mix of workouts that will enhance your health while having fun at the same time. Fit Box differentiates itself from other fitness centers by offering group workouts that focus on overall development. Fit Box has a simple philosophy - make fitness fun and easy with the help of best-in-class trainers and group workouts.</p>
+					  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  </div>
+			  </div>
+		</div>
+		<!-- Add more carousel items as needed -->
+	  </div>
+	  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	  </button>
+	  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Next</span>
+	  </button>
+	</div>
+	<br>
+	<br>
+	
+	<br>
+	<br>
+	
+	</body>
+	<footer>
+	
+	</footer>
+	</html>
+	
+	
+	
+	
+	
+	
+	

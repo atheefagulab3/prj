@@ -1,0 +1,99 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body routerLinkActive="/home">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand"  routerLink="/home">FitBoz</a>
+
+		<div class="collapse navbar-collapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" routerLink="/work" > Workouts </a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link"  routerLink="/exe"  >Exercise</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link"></a>
+				</li>
+        <div class="dropdown me-auto">
+          <button class="btn btn-dark text-white dropdown-toggle" type="button" data-bs-toggle="dropdown" >
+           Add Filter
+          </button>
+          <ul class="dropdown-menu ">
+            <li><a class="dropdown-item " routerLink="/datew">Date Time</a></li>
+            <li><a class="dropdown-item " href="/wcount">Total Count</a></li>
+            <li><a class="dropdown-item" routerLink="/work">none</a></li>
+            
+          </ul>
+        </div> 
+
+			</ul>
+      
+		</div>
+	</nav>
+ <div class="container">
+  <!-- <button (click)="Fetch()">View My Workouts</button> -->
+  <div class="row">
+    <div class="col-md-12">
+      <h4> Your Amazing Workout plans</h4>
+    </div>
+    <br><br>
+    <div class="col-md-4" *ngFor="let work of work">
+      <div class="card animate-on-scroll">
+        <div class="card-body text-white bg-dark">
+        <p class="work-wid">ID :{{work.wid}}</p>
+        <h5 class="work-name">{{ work.wname }}</h5>
+        <img [src]="'https://localhost:7154/Upload/'  + work.wimage" style="width: 50px;">
+        <p class="work-trainer">Trainer : {{ work.trainer }}</p>
+        <p class="work-intensity">Intensity :{{ work.intensity }}</p>
+        <!-- <p class="work-wdate"> Date: {{work.wdate|date}}</p> -->
+        <p class="work-duration"> Duration: {{work.duration }}</p>
+        <p class="work-maingoal"> Maingoal: {{work.maingoal }}</p>
+        <!-- <button class="btn btn-primary btn-custom book-now-btn animate-on-hover" style="margin-right: 10px;" routerLink="/upwork/:wid">Update</button>
+          <button class="btn btn-danger btn-custom book-now-btn animate-on-hover" routerLink="/delw/:wid">Delete</button> -->
+          <button type="button" class="btn btn-primary" (click)="put (work.wid)" routerLink="/upwork/:wid" style="margin-right: 10px;">Update</button>
+         <button type="button" class="btn btn-danger" (click)="deletew(work.wid)">Delete</button>
+          <button class="btn btn-warning btn-custom book-now-btn animate-on-hover" style="margin-left: 10px;" routerLink="/wid/:eid">Exercises</button>
+
+        </div>
+      </div>
+      <br>
+    </div>
+    <div class="col-md-4" >
+      <div class="card animate-on-scroll">
+        <div class="card-body text-white bg-dark">
+          <p>Wanna Add new Workout </p>
+          <p>we have so much</p>
+          <button class="btn btn-outline-light btn-lg px-5" type="submit" routerLink="/workouti">add</button> 
+        </div>
+      </div>
+      </div>
+  </div>
+ 
+</div> 
+</body>
+<footer>
+  <div class="copyright">
+    <p>&copy; 2023 Your Company. All rights reserved.</p>
+  </div>
+
+</footer>
+</html>
+
+

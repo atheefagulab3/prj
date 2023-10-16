@@ -1,0 +1,14 @@
+<p>eid works!</p>
+<p>harry-details works!</p>
+<input [(ngModel)]="eid" type="text" placeholder="please enter your id">
+<button (click)="getbyid()">getbyid</button> 
+<div *ngIf="exe">
+     <p>id:{{exe.eid}}</p>
+<h4>wid:{{exe.wid}}</h4>
+<p>supplement:{{exe.supplement}}</p>
+<p>time:{{exe.timeFrame}}</p>
+<p>set:{{exe.wkSet}}</p>
+ <p>rep:{{exe.wkRep}}</p>
+<p>equipments{{exe.equipmentRequired}}</p>
+<p>diet{{exe.diet}}</p>
+</div>

@@ -1,0 +1,16 @@
+<h1>Please enter your Workout you wanna search </h1>
+<input [(ngModel)]="wid" type="text" id="wid" placeholder="please enter your wid" style="margin-right: 10px;">
+<button (click)="getbywid()">get</button>  
+<div class="col-md-4" *ngFor="let exe of Exercise">
+  <div class="card animate-on-scroll">
+    <div class="card-body text-white bg-dark"> 
+  <h4>wid:{{exe.wid}}</h4>
+  <p>supplement:{{exe.supplement}}</p>
+    <p>time:{{exe.timeFrame}}</p>
+    <p>set:{{exe.wkSet}}</p>
+     <p>rep:{{exe.wkRep}}</p>
+      <p>equipments{{exe.equipmentRequired}}</p>
+      <p>diet{{exe.diet}}</p>
+      </div>
+      </div>
+</div>

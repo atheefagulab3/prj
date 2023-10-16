@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body routerLinkActive="/home">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand"  routerLink="/home">FitBoz</a>
+
+		<div class="collapse navbar-collapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" routerLink="/work" > Workouts </a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link"  routerLink="/exe"  >Exercise</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link"></a>
+				</li>
+        <div class="dropdown me-auto">
+          <button class="btn btn-dark text-white dropdown-toggle" type="button" data-bs-toggle="dropdown" >
+           Add Filter
+          </button>
+          <ul class="dropdown-menu ">
+            <li><a class="dropdown-item " href="/date">Date Time</a></li>
+            <li><a class="dropdown-item " href="#">Total Count</a></li>
+            <li><a class="dropdown-item" routerLink="/work">none</a></li>
+            
+          </ul>
+        </div> 
+
+			</ul>
+      
+		</div>
+	</nav>
+
+ 
+<!-- <input [(ngModel)]="wdate" type="datetime" id="wdate" placeholder="please enter your date">
+<button (click)="fetchdate()">get</button> 
+<div *ngFor="let workout of workouts">
+    <h3>{{ workout.wname }}</h3>
+    <p>Trainer: {{ workout.trainer }}</p>
+    <p>Intensity: {{ workout.intensity }}</p>
+    <p>Date: {{ workout.wdate | date }}</p>
+    <p>Duration: {{ workout.duration }}</p>
+    <p>Main Goal: {{ workout.maingoal }}</p>
+</div> -->
+<h1>Search according our Time Slot : </h1>
+
+<br>
+<br>
+<div class="container" style="align-items: center;">
+	<input [(ngModel)]="wdate" type="datetime" id="wdate" placeholder="please enter your date" style="margin-right: 10px;" #Required wdate>
+	<button (click)="fetchdate()">get</button> 
+	
+	  <br><br>
+	  <div  class="col-md-4" *ngFor="let workout of workouts">
+		<div class="card animate-on-scroll">
+		  <div class="card-body text-white bg-dark">
+			<h3>{{ workout.wname }}</h3>
+    <p>Trainer: {{ workout.trainer }}</p>
+    <p>Intensity: {{ workout.intensity }}</p>
+    <p>Date: {{ workout.wdate | date }}</p>
+    <p>Duration: {{ workout.duration }}</p>
+    <p>Main Goal: {{ workout.maingoal }}</p>
+	</div>
+	</div>
+	</div>
+	</div>
+</body>
+</html>

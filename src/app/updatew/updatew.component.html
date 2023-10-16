@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- <p>updatew works!</p>
+
+<label for="wid">wid</label>
+<input type="number" id="wid" [(ngModel)]="wid"  [(ngModel)]="work.wid">
+<label for="wname">hname</label>
+<input type="text" id="wname" [(ngModel)]="work.wname">
+<label for="trainer">hname</label>
+<input type="text" id="trainer" [(ngModel)]="work.trainer">
+<label for="intensity">intensity</label>
+<input type="text" id="intensity" [(ngModel)]="work.intensity">
+<label for="wdate">wdate</label>
+<input type="datetime" id="wdate" [(ngModel)]="work.wdate">
+<label for="duration">duration</label>
+<input type="text" id="duration" [(ngModel)]="work.duration">
+<label for="maingoal">maingoal</label>
+<input type="text" id="maingoal" [(ngModel)]="work.maingoal">
+<button (click)="put()">update</button>
+ -->
+ <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+  
+          <div class="card-body p-5 text-center">
+    
+            <div class="mb-md-5 mt-md-4 pb-5">
+  
+              <h2 class="fw-bold mb-2 text-uppercase"> Workout Subscription </h2>
+  <div class="align-items-center">
+
+ <label for="wid" style="padding: 10px;">WID</label>
+ <input type="number" id="wid" [(ngModel)]="work.wid"><br>
+ 
+ <label for="wname" style="padding: 10px;">Workout Name</label>
+ <input type="text" id="wname" [(ngModel)]="work.wname"><br>
+ 
+ <label for="trainer" style="padding: 10px;">Trainer</label>
+ <input type="text" id="trainer" [(ngModel)]="work.trainer"><br>
+ 
+ <label for="intensity" style="padding: 10px;">Intensity</label>
+ <input type="text" id="intensity" [(ngModel)]="work.intensity"><br>
+ 
+ <label for="wdate" style="padding: 10px;">Workout Date</label>
+ <input type="datetime-local" id="wdate" [(ngModel)]="work.wdate"><br>
+
+ <label for="wimage" style="padding: 10px;">Workout image</label>
+ 
+ <input type="file" id="wimage" [(ngModel)]="work.wimage"><br>
+ 
+ <label for="duration" style="padding: 10px;">Duration</label>
+ <input type="text" id="duration" [(ngModel)]="work.duration"><br>
+ 
+ <label for="maingoal" style="padding: 10px;">Main Goal</label>
+ <input type="text" id="maingoal" [(ngModel)]="work.maingoal"><br>
+ 
+ <button class="btn btn-outline-light btn-lg px-5" (click)="put()">Update</button>
+</div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+</body>
+</html>
+ 

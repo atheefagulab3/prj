@@ -1,0 +1,12 @@
+
+<input [(ngModel)]="wid" type="number" placeholder="please enter your id">
+<button (click)="getbyid()">getbyid</button> 
+<div *ngIf="work">
+    <p class="work-wid">Id:{{work.wid}}</p>
+        <h5 class="work-name">{{ work.wname }}</h5>
+        <p class="work-trainer">Location: {{ work.trainer }}</p>
+        <p class="work-intensity">Intensity: {{ work.intensity }}</p>
+        <p class="work-wdate"> Date: {{work.wdate|date}}</p>
+     <p class="work-duration"> Duration: {{work.duration }}</p>
+     <p class="work-maingoal"> Maingoal: {{work.maingoal }}</p>
+</div>
